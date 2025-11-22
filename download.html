@@ -12,11 +12,22 @@
             font-size: 18px;
             text-decoration: none;
             color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.2s;
         }
 
-        /* Only Download link turns red when mouse hover */
-        .nav a.download:hover {
-            color: red;
+        /* BIG when not hovered */
+        .download {
+            transform: scale(1.2);
+        }
+
+        /* SMALL + red background on hover */
+        .download:hover {
+            color: white;
+            background-color: red;
+            transform: scale(1);
         }
     </style>
 </head>
@@ -24,12 +35,15 @@
 
     <div class="nav">
         <a href="index.html">Home</a> |
-        <a href="Download.html" class="download">Download</a> |
+        <a href="Download.html" class="download"
+           onmouseover="location.href='Download.html'">
+           Download
+        </a> |
         <a href="Help.html">Help</a>
     </div>
 
     <h1 style="text-align:center;">
-        What are you want to download?
+        What are you want to Download?
     </h1>
 
 </body>
